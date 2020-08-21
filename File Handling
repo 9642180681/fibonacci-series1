@@ -1,0 +1,17 @@
+class numberverylargeerror(Exception):
+    pass
+class numberverysmallerror(Exception):
+    pass
+try:
+    n=int(input("enter a no"))
+    if n>50000:
+         raise numberverylargeerror
+    elif n<5:
+         raise numberverysmallerror
+    else:
+        print(n)
+        
+except numberverylargeerror:
+    print("no is very large")
+except numberverysmallerror:
+    print("no is very small")
